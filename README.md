@@ -1,45 +1,45 @@
 # INST414 Final
 
-# Data
+## Data
 The dependent variable for the analysis is the wine’s quality rating, which is the overall rating of each red wine sample on a scale of 1-10. The independent variables are the volatile acidity, fixed acidity, citric acid, pH level, residual sugar, and alcohol content. 
 
-# Quality
+**Quality**
 Output variable (based on sensory data, score between 0 and 10)
 
-# Alcohol
+**Alcohol**
 The percent alcohol content of the wine
 
-# pH
+**pH**
 Describes how acidic or basic a wine is on a scale from 0 (very acidic) to 14 (very basic); most wines are between 3-4 on the pH scale
 
-# Chlorides
+**Chlorides**
 The amount of salt in the wine
 
-# Residual Sugar
+**Residual Sugar**
 The amount of sugar remaining after fermentation stops
 
-# Citric Acid
+**Citric Acid**
 Found in small quantities, citric acid can add 'freshness' and flavor to wines
 
-# Volatile Acidity
+**Volatile Acidity**
 The amount of acetic acid in wine, which at too high of levels can lead to an unpleasant, vinegar taste
 
-# Fixed Acidity
+**Fixed Acidity**
 Most acids involved with wine or fixed or nonvolatile (do not evaporate readily)
 
 
-# Method
+## Method
 The data was collected through the UCI machine learning repository. The repository contained datasets for both red and white wine, but I went with red. Luckily there were no missing or null values in the dataset, which made my analysis much simpler. 
 
-# Analysis
+## Analysis
 The data was spit into a training and test set, where 30% of the Fata was for testing and the other 70% was for training. The SciKit Learn Linear Regression model and Random Forest Regression algorithm was then fit to the dataset and used to predict red wine quality rating. 
 
-# Results
+## Results
 The model had an R-squared score of 0.35, which means that 35% of the variance in the quality rating can be explained by the dependent variables. The model also had a variance score of about 93%, which means that the dependent variables can explain 93% of the changes in the red wine’s quality ratings. This verifies the relationship between the quality rating and the physiochemical makeup of the red wine. 
 
-# Conclusion
+## Conclusion
 
-How much of an effect does a red wine’s citric acid, ph, and chlorides have on its overall quality rating?
+**How much of an effect does a red wine’s citric acid, ph, and chlorides have on its overall quality rating?**
 
 A red wine’s citric acid shows to not have a strong effect on the quality of the wine. Wines with citric acid levels on the lower end, between 0.0 and 0.6, produce an average quality rating of ~5. Higher levels of citric acid did not correspond to the higher quality rating. 
 
@@ -47,11 +47,11 @@ The wine’s pH levels, between 2-5, also appear as having little influence on t
 
 The wine’s chloride levels on the graph consistently align with average to high quality ratings when the chloride levels are low. 
 
-Does a red wines acidity levels (fixed, volatile, citrus) compromise the alcohol content percentage? 
+**Does a red wines acidity levels (fixed, volatile, citrus) compromise the alcohol content percentage? **
 
 The pair plot told us that the acidity levels had no effect on the alcohol content of the wine. Interestingly enough, there was a positive relationship between the citric acid and fixed acidity, and a negative relationship between citric acid and volatile acidity. 
 
-For wines with high amounts of volatile acid, can the introduction of high levels of sugar still contribute to a high quality rating?
+**For wines with high amounts of volatile acid, can the introduction of high levels of sugar still contribute to a high quality rating?**
 
 For wines with high amounts of volatile acid, the residual sugar content levels were low, or less than 5. Likewise, the quality rating showed to be higher in wines with a volatile acidity between 0.2 and 1. Additionally, wines with average amounts of residual sugar made for higher quality ratings, as well. When volatile acidity levels are too high, it can create an unpleasant vinegar taste that might contribute to a lower rating. Volatile acidity between 0.5 and 1 make for higher quality ratings (average to high), and those same volatile acidity levels are related to low-average amounts of residual sugar. Higher amounts of residual sugars do not cause higher quality ratings, so we can conclude that the introduction of high levels of sugar in wines with high levels of volatile acid do not contribute to a high quality rating. 
 
