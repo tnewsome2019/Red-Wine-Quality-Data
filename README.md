@@ -1,4 +1,11 @@
 # INST414 Final
+## Introduction 
+
+The topic that I have chosen for data analysis is red wine, and how it’s physiochemical contents, like pH levels and acidity, can inform its overall quality. Additionally, I will examine how some contents affect other content areas, and if all of those elements interacting with each other has a significant effect on the wine. There is a lot that goes into what makes a wine “good” or of high quality, and with that, there are many areas that could fall short and also affect the overall rating or the wine for better or worse.
+
+I will be using the Red Wine Quality dataset from the UCI machine learning repository (https://archive.ics.uci.edu/ml/datasets/wine+quality).
+ 
+I chose to work with this dataset because I am curious to see how much particularity there is around a good red wine, since I know that the world of wine itself is very particular as far as the seemingly-unnoticeable details that are considered during the assessment. 
 
 ## Data
 The dependent variable for the analysis is the wine’s quality rating, which is the overall rating of each red wine sample on a scale of 1-10. The independent variables are the volatile acidity, fixed acidity, citric acid, pH level, residual sugar, and alcohol content. 
