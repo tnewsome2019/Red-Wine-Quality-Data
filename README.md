@@ -54,7 +54,7 @@ The wine’s pH levels, between 2-5, also appear as having little influence on t
 
 The wine’s chloride levels on the graph consistently align with average to high quality ratings when the chloride levels are low. 
 
-**Does a red wines acidity levels (fixed, volatile, citrus) compromise the alcohol content percentage? **
+**Does a red wines acidity levels (fixed, volatile, citrus) compromise the alcohol content percentage?**
 
 The pair plot told us that the acidity levels had no effect on the alcohol content of the wine. Interestingly enough, there was a positive relationship between the citric acid and fixed acidity, and a negative relationship between citric acid and volatile acidity. 
 
