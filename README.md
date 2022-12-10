@@ -36,23 +36,24 @@ Most acids involved with wine or fixed or nonvolatile (do not evaporate readily)
 
 
 ## Method
-The data was collected through the UCI machine learning repository. The repository contained datasets for both red and white wine, but I went with red. Luckily there were no missing or null values in the dataset, which made my analysis much simpler. 
+The data was collected through the UCI machine learning repository. The repository contained datasets for both red and white wine, but I went with red. Luckily there were no missing or null values in the dataset, which made my analysis much simpler. I dropped "total sulfur dioxide" due to its low correlation with the "quality" column. 
 
 ## Analysis
-The data was spit into a training and test set, where 30% of the Fata was for testing and the other 70% was for training. The SciKit Learn Linear Regression model and Random Forest Regression algorithm was then fit to the dataset and used to predict red wine quality rating. 
+The variables were defined, with "quality" as the target variable, and the other physicochemical properties as the x-value. The quality variable was coded from being a range of 0 - 10, to binary for classicfiction. The data was also split into a training and test set, where 30% of the data was for testing and the other 70% was for training. The SciKit Learn Logistic Regression model and Random Forest Classifier algorithm was then fit to the dataset and used to predict red wine quality rating. 
 
 ## Results
-The model had an R-squared score of 0.35, which means that 35% of the variance in the quality rating can be explained by the dependent variables. The model also had a variance score of about 93%, which means that the dependent variables can explain 93% of the changes in the red wine’s quality ratings. This verifies the relationship between the quality rating and the physiochemical makeup of the red wine. 
+The model had an accuracy score of 98%, which means that it is highly accurate in its prediction. The model also had an accuracy score of 98% with the use of the Random Forest Classifier, which means it is still equally as accurate in predicition the quality. This verifies the relationship between the quality rating and the physiochemical makeup of the red wine. 
 
 ## Conclusion
 
+The purpose of this analysis was to answer some questions about the relationship between all of the variables.
 **How much of an effect does a red wine’s citric acid, ph, and chlorides have on its overall quality rating?**
 
-A red wine’s citric acid shows to not have a strong effect on the quality of the wine. Wines with citric acid levels on the lower end, between 0.0 and 0.6, produce an average quality rating of ~5. Higher levels of citric acid did not correspond to the higher quality rating. 
+A red wine’s citric acid shows to have a postive effect on the quality of the wine. It seems as citric acid between 0 and 0.5 have an increse in quality, but it drops the further it goes along.   
 
-The wine’s pH levels, between 2-5, also appear as having little influence on the wine’s quality. The graphs shows concentration and correlation between an average pH level and an average quality rating, with pH levels on the lower or higher end not significantly changing the quality. 
+The wine’s pH levels, between 2-5, also appear as having slight negative influence on the wine’s quality. The graphs shows concentration and correlation between an average pH level and an average quality rating, with pH levels on the lower or higher end not significantly changing the quality. 
 
-The wine’s chloride levels on the graph consistently align with average to high quality ratings when the chloride levels are low. 
+The wine’s chloride levels on the graph have a negative relationship with the quality rating. Quality is higher when the chlorides are low.  
 
 **Does a red wines acidity levels (fixed, volatile, citrus) compromise the alcohol content percentage?**
 
