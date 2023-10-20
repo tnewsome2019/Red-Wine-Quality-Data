@@ -1,66 +1,52 @@
 # INST414 Final
-## Introduction 
 
-The topic that I have chosen for data analysis is red wine, and how it’s physiochemical contents, like pH levels and acidity, can inform its overall quality. Additionally, I will examine how some contents affect other content areas, and if all of those elements interacting with each other has a significant effect on the wine. There is a lot that goes into what makes a wine “good” or of high quality, and with that, there are many areas that could fall short and also affect the overall rating or the wine for better or worse.
+## Introduction
 
-I will be using the Red Wine Quality dataset from the UCI machine learning repository (https://archive.ics.uci.edu/ml/datasets/wine+quality).
- 
-I chose to work with this dataset because I am curious to see how much particularity there is around a good red wine, since I know that the world of wine itself is very particular as far as the seemingly-unnoticeable details that are considered during the assessment. 
+In this analysis, I delve into the world of red wine, exploring its physiochemical properties such as pH levels and acidity to gain insights into its overall quality. Additionally, I investigate the interplay between these properties and whether they collectively influence a wine's quality rating. The intricacies of what defines a "good" or high-quality wine are multifaceted, with numerous factors that can enhance or detract from its rating.
+
+I will be utilizing the Red Wine Quality dataset sourced from the UCI machine learning repository [here](https://archive.ics.uci.edu/ml/datasets/wine+quality).
+
+The choice of this dataset stems from my curiosity about the level of specificity involved in defining a good red wine. The world of wine is renowned for its meticulous attention to seemingly imperceptible details during evaluation.
 
 ## Data
-The dependent variable for the analysis is the wine’s quality rating, which is the overall rating of each red wine sample on a scale of 1-10. The independent variables are the volatile acidity, fixed acidity, citric acid, pH level, residual sugar, and alcohol content. 
 
-**Quality**
-Output variable (based on sensory data, score between 0 and 10)
-
-**Alcohol**
-The percent alcohol content of the wine
-
-**pH**
-Describes how acidic or basic a wine is on a scale from 0 (very acidic) to 14 (very basic); most wines are between 3-4 on the pH scale
-
-**Chlorides**
-The amount of salt in the wine
-
-**Residual Sugar**
-The amount of sugar remaining after fermentation stops
-
-**Citric Acid**
-Found in small quantities, citric acid can add 'freshness' and flavor to wines
-
-**Volatile Acidity**
-The amount of acetic acid in wine, which at too high of levels can lead to an unpleasant, vinegar taste
-
-**Fixed Acidity**
-Most acids involved with wine or fixed or nonvolatile (do not evaporate readily)
-
+- **Quality**: The dependent variable for this analysis is the wine's quality rating, which falls on a scale of 1 to 10.
+- **Alcohol**: Denotes the alcohol content percentage of the wine.
+- **pH**: Quantifies the acidity or basicity of the wine on a scale ranging from 0 (very acidic) to 14 (very basic). Most wines typically have pH levels between 3 and 4.
+- **Chlorides**: Reflects the salt content in the wine.
+- **Residual Sugar**: Represents the remaining sugar content after the fermentation process.
+- **Citric Acid**: Present in small quantities, citric acid can contribute to freshness and flavor in wines.
+- **Volatile Acidity**: Indicates the presence of acetic acid in wine, which, at excessive levels, can lead to an unpleasant vinegar-like taste.
+- **Fixed Acidity**: Refers to the nonvolatile acids in wine that do not readily evaporate.
 
 ## Method
-The data was collected through the UCI machine learning repository. The repository contained datasets for both red and white wine, but I went with red. Luckily there were no missing or null values in the dataset, which made my analysis much simpler. I dropped "total sulfur dioxide" due to its low correlation with the "quality" column. 
+
+The dataset was collected from the UCI machine learning repository, with a specific focus on red wine. Fortunately, the dataset didn't contain any missing or null values, simplifying the analysis process. "Total sulfur dioxide" was omitted due to its low correlation with the "quality" column.
 
 ## Analysis
-The variables were defined, with "quality" as the target variable, and the other physicochemical properties as the x-value. The quality variable was coded from being a range of 0 - 10, to binary for classicfiction. The data was also split into a training and test set, where 30% of the data was for testing and the other 70% was for training. The SciKit Learn Logistic Regression model and Random Forest Classifier algorithm was then fit to the dataset and used to predict red wine quality rating. 
+
+Variables were meticulously defined, with "quality" as the target variable and other physicochemical properties as the independent variables. The quality variable was transformed into a binary classification, and the data was partitioned into training (70%) and test (30%) sets. A SciKit Learn Logistic Regression model and a Random Forest Classifier were then applied to predict the quality rating of red wine.
 
 ## Results
-The model had an accuracy score of 98%, which means that it is highly accurate in its prediction. The model also had an accuracy score of 98% with the use of the Random Forest Classifier, which means it is still equally as accurate in predicition the quality. This verifies the relationship between the quality rating and the physiochemical makeup of the red wine. 
+
+The model displayed an impressive accuracy score of 98%, suggesting high precision in predictions. The Random Forest Classifier, too, achieved a matching accuracy score of 98%, reinforcing the strong connection between the quality rating and the physiochemical composition of red wine.
 
 ## Conclusion
 
-The purpose of this analysis was to answer some questions about the relationship between all of the variables.
-**How much of an effect does a red wine’s citric acid, ph, and chlorides have on its overall quality rating?**
+The analysis aimed to shed light on several key questions about the relationships between these variables.
 
-A red wine’s citric acid shows to have a postive effect on the quality of the wine. It seems as citric acid between 0 and 0.5 have an increse in quality, but it drops the further it goes along.   
+**To what extent do citric acid, pH, and chlorides influence a red wine's overall quality rating?**
 
-The wine’s pH levels, between 2-5, also appear as having slight negative influence on the wine’s quality. The graphs shows concentration and correlation between an average pH level and an average quality rating, with pH levels on the lower or higher end not significantly changing the quality. 
+Citric acid exhibits a positive effect on wine quality, with the highest ratings occurring in wines with citric acid levels between 0 and 0.5, gradually declining as levels increase.
 
-The wine’s chloride levels on the graph have a negative relationship with the quality rating. Quality is higher when the chlorides are low.  
+pH levels between 2 and 5 show a marginal negative influence on wine quality. The correlation between average pH levels and quality ratings suggests that pH levels at the lower or higher extremes have minimal impact on quality.
 
-**Does a red wines acidity levels (fixed, volatile, citrus) compromise the alcohol content percentage?**
+Chloride levels exhibit a negative relationship with quality, indicating higher quality when chlorides are lower.
 
-The pair plot told us that the acidity levels had no effect on the alcohol content of the wine. Interestingly enough, there was a positive relationship between the citric acid and fixed acidity, and a negative relationship between citric acid and volatile acidity. 
+**Do the acidity levels (fixed, volatile, citric) compromise alcohol content percentage?**
 
-**For wines with high amounts of volatile acid, can the introduction of high levels of sugar still contribute to a high quality rating?**
+The pair plot analysis reveals that acidity levels do not significantly affect alcohol content. Intriguingly, a positive relationship exists between citric acid and fixed acidity, while a negative relationship exists between citric acid and volatile acidity.
 
-For wines with high amounts of volatile acid, the residual sugar content levels were low, or less than 5. Likewise, the quality rating showed to be higher in wines with a volatile acidity between 0.2 and 1. Additionally, wines with average amounts of residual sugar made for higher quality ratings, as well. When volatile acidity levels are too high, it can create an unpleasant vinegar taste that might contribute to a lower rating. Volatile acidity between 0.5 and 1 make for higher quality ratings (average to high), and those same volatile acidity levels are related to low-average amounts of residual sugar. Higher amounts of residual sugars do not cause higher quality ratings, so we can conclude that the introduction of high levels of sugar in wines with high levels of volatile acid do not contribute to a high quality rating. 
+**For wines with high volatile acidity, can high sugar levels contribute to a high quality rating?**
 
- 
+Wines with elevated volatile acidity tend to have low residual sugar content, typically below 5. These wines receive higher quality ratings when volatile acidity falls between 0.2 and 1. Additionally, wines with average residual sugar levels tend to have higher quality ratings. However, higher residual sugar amounts do not result in higher quality ratings. Consequently, introducing high sugar levels to wines with high volatile acid content does not lead to a higher quality rating.
